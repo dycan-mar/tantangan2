@@ -9,10 +9,21 @@
     }
 
     .atas {
-        background-image: url("../assets/img/bg.png");
-        background-repeat: no-repeat;
-        background-size: cover;
+        width: 100%;
         height: 100vh;
+        background-color: #2124B1 !important;
+        background: url("<?= $baseurl ?>assets/img/bg-dot.png"),
+            url("<?= $baseurl ?>assets/img/bg-dot.png"),
+            url("<?= $baseurl ?>assets/img/bg-round.png"),
+            url("<?= $baseurl ?>assets/img/bg-tree.png"),
+            url("<?= $baseurl ?>assets/img/bg-bottom.png");
+        background-size: auto, auto, auto, auto, 100%;
+        background-position: 10px 10px,
+            bottom 190px right 10px,
+            left 55% top -1px,
+            left 45% bottom -1px,
+            center bottom -2px;
+        background-repeat: no-repeat;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -37,22 +48,12 @@
     }
 
     .section {
-        padding: 7rem;
         display: flex;
         justify-content: center;
     }
 
     .section h6 {
         color: blue;
-    }
-
-    .gambar {
-        height: 70vh;
-        padding: 3rem;
-        display: flex;
-        border-radius: 60px;
-        width: 200;
-        margin-left: 80px;
     }
 
     .section .info .miring {
@@ -126,9 +127,21 @@
         position: relative;
     }
 
+    /* news */
     .news {
+        background-image: url("../assets/img/bg2.png");
         background-repeat: no-repeat;
         background-size: cover;
+
+        height: 300px;
+    }
+
+    /* end news */
+
+    @media (max-width:991px) {
+        .atas {
+            height: 50vh;
+        }
     }
 </style>
 
@@ -139,7 +152,7 @@
             Lowongan Pekerjaan
         </h1>
         <div class="located text-center">
-            <a href="">Beranda<i>/</i></a>
+            <a href="../beranda/index.php">Beranda<i>/</i></a>
             <a href=""> Halaman<i>/</i></a>
             <a href="">Karir</a>
         </div>
@@ -148,51 +161,56 @@
 <!-- section atas end -->
 
 <!-- section ke 2 -->
-<section class="section">
-    <div class="hidden from-bottom">
+<section class="section py-5 px-3 px-md-5 row">
+    <div class="hidden from-bottom col-lg-7">
         <h6><b>Lowongan Kerja</b></h6>
         <h1 class="">Magang Web Programmer dan Wordpress Developer</h1>
         <label class="rounded-pill text-center btn-success px-2">Lowongan dibuka</label>
-        <div class="info">
+        <div class="info col-sm-12">
             <p class="miring">01 Januari 2024 - 07 Januari 2024</p>
-            <p>Bagi kamu yang ingin belajar atau memperdalam kemampuan dibidang IT khususnya di bidang programming dan
-                wordress, silahkan untuk bergabung bersama kami dengan mengirimkan lamaran ke email karir@tubanweb.com
+            <p>Bagi kamu yang ingin belajar atau memperdalam kemampuan dibidang IT khususnya di bidang programming
+                dan
+                wordress, silahkan untuk bergabung bersama kami dengan mengirimkan lamaran ke email
+                karir@tubanweb.com
             </p>
-            <h3>kualifikasi web programmer:</h3>
+            <h3 class="fs-5">kualifikasi web programmer:</h3>
             <p> <span>✔️</span> Memahami PHP</p>
             <p><span>✔️</span> Memahami HTML, CSS dan Javascript</p>
             <p><span>✔️</span> Familiar dengan Bootstrap</p>
-            <h3>kualifikasi Wordpress Developer:</h3>
+            <h3 class="fs-5 mt-3">kualifikasi Wordpress Developer:</h3>
             <p> <span>✔️</span> Familiar dengan CMS Wordpress</p>
             <p><span>✔️</span> Pernah menggunakan Page Builder (Elementor / Sejenisnya)</p>
-            <h3>kualifikasi Umum</h3>
+            <h3 class="fs-5 mt-3">kualifikasi Umum</h3>
             <p> <span>✔️</span> Fulltime (Onsite)</p>
             <p><span>✔️</span> Disiplin waktu</p>
             <p><span>✔️</span> Maksimal usia 25 tahun</p>
             <p><span>✔️</span> Jam magang, Senin - Sabtu (08:00 - 16:00)</p>
 
-            <a class="btn btn-primary rounded-pill text-white px-4 me-2">kirim laporan</a>
+            <a class="btn btn-primary text-white rounded-pill px-4 me-2">kirim laporan</a>
 
         </div>
     </div>
-    <div class="hidden scale-up">
-        <img src="../assets/img/magang_2024_1.jpg" class="gambar" alt="">
+    <div class="hidden scale-up col-lg-5 text-center">
+        <div class="p-lg-5 pt-lg-2">
+            <img src="../assets/img/magang_2024_1.jpg" class="my-sm-5 my-lg-0 img-fluid"
+                style="border-radius: 30px !important;" alt="">
+        </div>
     </div>
 </section>
 <!-- section ke 2 end -->
 
 <!-- section ke 3 -->
-<section class="section">
-    <div class="hidden from-bottom">
+<section class="section py-5 px-3 px-md-5 row">
+    <div class="hidden from-bottom col-lg-7">
         <h6><b>Lowongan Kerja</b></h6>
         <h1 class="">Customer Service</h1>
-        <label class="bg-danger text-white rounded-pill px-2 text-center">Lowongan sudah Tutup</label>
+        <label class="bg-danger text-white rounded-pill  text-center">Lowongan sudah Tutup</label>
         <div class="info">
             <p class="miring">29 November 2023 s/d 15 November 2023</p>
             <p>Bagi anda yang mempunyai keahlian di bidang komunikasi dan sedikit keahlian Teknik Informatika, silahkan
                 untuk bergabung bersama kami dengan mengirimkan lamaran ke email karir@tubanweb.com
             </p>
-            <h3>Kualifikasi calon pelamar:</h3>
+            <h3 class="fs-5 mt-3">Kualifikasi calon pelamar:</h3>
             <p> <span>✔️</span> Wanita, usia maksimal 30 tahun</p>
             <p><span>✔️</span> Mampu berkomunikasi dengan baik dan sabar</p>
             <p><span>✔️</span> Mampu mengoperasikan Ms. Office</p>
@@ -202,15 +220,18 @@
 
         </div>
     </div>
-    <div class="hidden scale-up">
-        <img src="../assets/img/customer-service.jpeg" class="gambar" alt="">
+    <div class="hidden scale-up col-lg-5 text-center">
+        <div class="p-lg-5 pt-lg-2">
+            <img src="../assets/img/customer-service.jpeg" class="mt-sm-5 mt-lg-0 img-fluid"
+                style="border-radius: 30px !important;" alt="">
+        </div>
     </div>
 </section>
 <!-- section ke 3 end -->
 
 <!-- section ke 4 -->
-<section class="section">
-    <div class="hidden from-bottom">
+<section class="section py-5 px-3 px-md-5 row">
+    <div class="hidden from-bottom col-lg-7">
         <h6><b>Lowongan Kerja</b></h6>
         <h1>Junior Web Programmer</h1>
         <label class="bg-danger rounded-pill text-white mb-3 px-2">Lowongan Sudah Tutup</label>
@@ -218,7 +239,7 @@
             <p class="miring">04 Oktober 2023 s/d 15 Oktober 2023</p>
             <p>Yang suka koding bisa bergabung bersama kami sebagai web programmer dan tingkatkan kemampuan anda
             </p>
-            <h3>Kualifikasi calon pelamar:</h3>
+            <h3 class="fs-5 mt-3">Kualifikasi calon pelamar:</h3>
             <p> <span>✔️</span> Menguasai PHP (Codeigniter)</p>
             <p><span>✔️</span> Memahami HTML, CSS, Javascript</p>
             <p><span>✔️</span> Familiar dengan Bootstrap</p>
@@ -232,8 +253,11 @@
 
         </div>
     </div>
-    <div class="hidden scale-up">
-        <img src="../assets/img/junior-programmer.jpeg" class="gambar" alt="">
+    <div class="hidden scale-up col-lg-5 text-center">
+        <div class="p-lg-5 pt-lg-2">
+            <img src="../assets/img/junior-programmer.jpeg" class="mt-sm-5 mt-lg-0 img-fluid"
+                style="border-radius: 30px !important;" alt="">
+        </div>
     </div>
 </section>
 <!-- section ke 4 end -->
@@ -339,28 +363,31 @@
 <!-- card end -->
 
 
+
 <!-- news -->
-<section class="hidden from-bottom news pt-4 mt-5 " id="news"
-    style=" background-image: url('../assets/img/bg.png');height:300px;">
-    <div class="container d-flex justify-align-end">
-        <div class="container col-6 ">
-            <h2 class="text-light fs-2 fw-bold">Ingin mendapatkan informasi terbaru dari TubanWeb?</h2>
-            <small class="text-light">Masukan nomor whatsapp anda dan tekan tombol kirim untuk mendapatkan update
-                informasi terbaru dari kami.</small>
-            <div class="position-relative w-100 mt-3">
-                <input class="form-control" style="border-radius: 2rem;" type="text"
-                    placeholder="Masukan nomor whatsapp di sini">
-                <button class="btn shadow-none position-absolute top-0 end-0 ">
-                    <svg xmlns=" http://www.w3.org/2000/svg" width="22" height="22" fill="#2124B1"
-                        class="bi bi-send-fill" viewBox="0 0 16 16">
-                        <path
-                            d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471z" />
-                    </svg>
-                </button>
+<section class="hidden from-bottom news pt-4 mt-5 " id="news">
+    <div class="container  d-flex justify-align-end">
+        <div class="row">
+            <div class=" col-md-6  mb-sm-3">
+                <h2 class="text-light fs-2 fw-bold">Ingin mendapatkan informasi terbaru dari TubanWeb?</h2>
+                <small class="text-light">Masukan nomor whatsapp anda dan tekan tombol kirim untuk mendapatkan update
+                    informasi terbaru dari kami.</small>
+                <div class="position-relative w-100 mt-3">
+                    <input class="form-control" style="border-radius: 2rem;" type="text"
+                        placeholder="Masukan nomor whatsapp di sini">
+                    <button class="btn shadow-none position-absolute top-0 end-0 ">
+                        <svg xmlns=" http://www.w3.org/2000/svg" width="22" height="22" fill="#2124B1"
+                            class="bi bi-send-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471z" />
+                        </svg>
+                    </button>
+                </div>
             </div>
-        </div>
-        <div class="col-6 text-center mb-5 d-none d-md-block">
-            <img src="../assets/img/newsletter.png" alt="">
+            <div class="col-md-6 text-center mb-5 d-none d-md-block  ">
+                <img class="img-fluid mt-5 text-center" style="height: 250px;" src="../assets/img/newsletter.png"
+                    alt="">
+            </div>
         </div>
     </div>
 </section>

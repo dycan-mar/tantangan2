@@ -1,7 +1,7 @@
 <div class="hidden container-fluid bg-warning text-light footer mt-5 py-4 wow fadeIn">
     <div class="container pb-5 pt-0">
         <div class="row align-items-center">
-            <div class="col-md-6 text-strat">
+            <div class="col-md-6 text-start">
                 <h2>Ingin Konsultasi?</h2>
                 <p>Silahkan hubungi kami melalui whatsapp untuk mendapatkan konsultasi gratis untuk menentukan
                     website apa yang cocok untuk
@@ -23,15 +23,15 @@
     </div>
 </div>
 
-<section class="container-fluid bg-primary text-dark">
+<section class="container-fluid text-dark bg-primary">
     <div class="container py-5 px-lg-5">
         <div class="row">
-            <div class="col-md-3 pt-5 pb-5 pe-3">
+            <div class="col-md-3 pt-5 pb-5 pe-3 pb-md-1">
                 <img src="../assets/img/logo-light.png" alt="" height="55" width="100">
                 <p class="text-light pt-2">Jasa pembuatan website, aplikasi andorid & desktop, desain grafis dll yang
                     mengutamakan kualitas produk dan keramahan customer service dalam melayani anda.</p>
             </div>
-            <div class="col-md-3 pt-5 pb-3">
+            <div class="col-md-3 pt-5 pb-3 pb-sm-1">
                 <h4 class="text-light xl fw-normal">Tautan Poluler</h4>
                 <ul class="list-unstyled pt-1 text-decoration-none">
                     <li><a href="<?= $baseurl ?>beranda/index.php" style="text-decoration:none; pad: 
@@ -144,7 +144,7 @@
                 </div>
             </div>
         </div>
-    </div>getElementById
+    </div>
 </section>
 
 <!-- Modal -->
@@ -168,12 +168,19 @@
     </div>
 </div>
 
-<!-- navbar -->
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+
+<!-- component -->
 <script>
+    // navbar
     const navbar = document.getElementById('navbar');
     const logo = document.getElementById('logo');
-    const navLinks = document.querySelectorAll(".nav-link")
-    window.addEventListener("scroll", function () {
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    function scrollNav() {
+        console.log("scroll");
         if (window.scrollY > 50) {
             navbar.classList.remove("bg-transparent");
             navbar.classList.add("bg-light");
@@ -192,6 +199,95 @@
             logo.src = "http://localhost/TubanWeb/assets/img/logo-light.png"
 
         }
+    }
+    function handleScroll() {
+        scrollNav();
+    }
+
+    function resNav(width) {
+        if (width < 992) {
+            console.log('mobile');
+            window.removeEventListener("scroll", handleScroll);
+            navbar.classList.remove("bg-transparent");
+            navbar.classList.add("bg-light");
+            navLinks.forEach(navLink => {
+                navLink.classList.remove("text-light");
+                navLink.classList.add("text-dark");
+            });
+            logo.src = "http://localhost/TubanWeb/assets/img/logo.png";
+        } else {
+            console.log('desktop')
+            navbar.classList.remove("bg-light");
+            navbar.classList.add("bg-transparent");
+            navLinks.forEach(navLink => {
+                navLink.classList.remove("text-light");
+                navLink.classList.add("text-dark");
+            });
+            console.log("PP")
+            window.addEventListener("scroll", handleScroll);
+        }
+    }
+
+    window.addEventListener("resize", function () {
+        let width = window.innerWidth
+        resNav(width);
+    })
+    window.addEventListener("DOMContentLoaded", function () {
+        let width = window.innerWidth
+        resNav(width);
+    });
+    // end navbar
+
+    // card-testi
+    window.addEventListener("DOMContentLoaded", function () {
+        const swipe = new Swiper(".swiper-container", {
+            slidesPerView: 1,
+            centeredSlides: true,
+            spaceBetween: 20,
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 3
+                }
+
+            },
+            on: {
+                slideChangeTransitionEnd: function () {
+                    let cards = document.querySelectorAll(".swiper-slide");
+                    cards.forEach(card => {
+                        if (card.classList.contains("swiper-slide-active")) {
+                            card.classList.add("bg-light",);
+                            card.classList.replace('text-light', 'text-dark')
+                            let container = card.querySelector('.p-4');
+                            container.querySelector('p').classList.toggle('text-secondary')
+                            let content = container.querySelector('.d-flex');
+                            let c = content.querySelector('.ps-4');
+                            let h = content.querySelector('h6');
+                            c.classList.add('text-dark')
+                            card.querySelector('svg').style.fill = "#2124B1";
+                        } else {
+                            card.classList.remove("bg-light",);
+                            let container = card.querySelector('.p-4');
+                            container.querySelector('p').classList.remove('text-secondary')
+                            let content = container.querySelector('.d-flex');
+                            let c = content.querySelector('.ps-4');
+                            let h = content.querySelector('h6');
+                            c.classList.remove('text-dark')
+                            card.querySelector('svg').style.fill = '#ffffff';
+                        }
+                    });
+                }
+            }
+        })
+        console.log(swipe);
     })
 </script>
 <!-- animation -->
@@ -202,7 +298,7 @@
         const observer = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add("show"); // Tambahkan class show saat terlihat
+                    entry.target.classList.add("show"); //  class show saat terlihat
                     observer.unobserve(entry.target); // Hentikan pengamatan setelah muncul
                 }
             });
@@ -216,8 +312,14 @@
     });
 
 </script>
+
 <script src="<?= $baseurl ?>assets/js/bootstrap.bundle.min.js"></script>
-<script src="../assets/js/feather.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>

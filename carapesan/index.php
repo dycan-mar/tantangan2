@@ -7,8 +7,21 @@
     }
 
     #hero {
+        width: 100%;
         height: 100vh;
-        background-image: url("../assets/img/bg.png");
+        background-color: #2124B1 !important;
+        background: url("<?= $baseurl ?>assets/img/bg-dot.png"),
+            url("<?= $baseurl ?>assets/img/bg-dot.png"),
+            url("<?= $baseurl ?>assets/img/bg-round.png"),
+            url("<?= $baseurl ?>assets/img/bg-tree.png"),
+            url("<?= $baseurl ?>assets/img/bg-bottom.png");
+        background-size: auto, auto, auto, auto, 100%;
+        background-position: 10px 10px,
+            bottom 190px right 10px,
+            left 55% top -1px,
+            left 45% bottom -1px,
+            center bottom -2px;
+        background-repeat: no-repeat;
     }
 
     .located {
@@ -42,12 +55,18 @@
     .card-title {
         color: black !important;
     }
+
+    @media (max-width:991px) {
+        #hero {
+            height: 50vh;
+        }
+    }
 </style>
-<section id="hero" class="d-flex justify-content-center align-items-center text-light">
+<section id="hero" class="container-xxl d-flex justify-content-center align-items-center text-light">
     <div class="d-block text-center">
         <h1 class="hidden scale-up fw-bold">Cara Pesan</h1>
         <div class="located d-flex mt-3">
-            <a href="">Beranda<i>/</i></a>
+            <a href="../beranda/index.php">Beranda<i>/</i></a>
             <a href=""> Halaman<i>/</i></a>
             <a href="">Cara pesan</a>
         </div>

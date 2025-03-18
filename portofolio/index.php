@@ -7,8 +7,21 @@
     }
 
     #hero {
+        width: 100%;
         height: 100vh;
-        background-image: url("../assets/img/bg.png");
+        background-color: #2124B1 !important;
+        background: url("<?= $baseurl ?>assets/img/bg-dot.png"),
+            url("<?= $baseurl ?>assets/img/bg-dot.png"),
+            url("<?= $baseurl ?>assets/img/bg-round.png"),
+            url("<?= $baseurl ?>assets/img/bg-tree.png"),
+            url("<?= $baseurl ?>assets/img/bg-bottom.png");
+        background-size: auto, auto, auto, auto, 100%;
+        background-position: 10px 10px,
+            bottom 190px right 10px,
+            left 55% top -1px,
+            left 45% bottom -1px,
+            center bottom -2px;
+        background-repeat: no-repeat;
     }
 
     .located {
@@ -42,12 +55,18 @@
     .card-title {
         color: black !important;
     }
+
+    @media (max-width:991px) {
+        #hero {
+            height: 50vh;
+        }
+    }
 </style>
 <section id="hero" class="d-flex justify-content-center align-items-center text-light">
     <div class="d-block text-center">
         <h1 class="hidden scale-up fw-bold">Portofolio</h1>
         <div class="located d-flex mt-3">
-            <a href="">Beranda<i>/</i></a>
+            <a href="../beranda/index.php">Beranda<i>/</i></a>
             <a href=""> Halaman<i>/</i></a>
             <a href="">Cara pesan</a>
         </div>
@@ -57,24 +76,23 @@
 
 <!-- card 1 -->
 <div class="container-xxl py-5">
-    <div class="container">
-        <div class="container row ">
-            <div class="hidden from-bottom col-8 ">
-                <div class="section-title position-relative mb-4 pb-2">
-                    <h6 class="text-primary position-relative ps-4"><b>Portofolio</b></b></h6>
-                    <h2 class="mt-2 fw-bold">Berbagai macam proyek yang sudah dijalankan di berbagai perusahaan</h2>
-                </div>
-                <p class="mb-4 text-secondary">
-                    Berbagai proyek aplikasi dan website berhasil kita luncurkan di berbagai perusahaan. Silahkan
-                    tekan tombol "Tanyakan" jika anda ingin mengetahui informasi dari customer service terkait
-                    dengan aplikasi tersebut. Silahkan tekan "Selengkapnya" untuk mednapatkan informasi langsung
-                    dari website ini.
-                </p>
+    <div class="row ">
+        <div class="hidden from-bottom p-4 px-md-5 col-lg-8 ">
+            <div class="section-title  mb-4 pb-2">
+                <h6 class="text-primary  "><b>Portofolio</b></b></h6>
+                <h2 class="mt-2 fw-bold">Berbagai macam proyek yang sudah dijalankan di berbagai perusahaan</h2>
             </div>
-            <div class="hidden scale-up col-4 ">
-                <img src="../assets/img/about.jpg" style="width: 385px;" alt="">
-            </div>
+            <p class="mb-4 text-secondary">
+                Berbagai proyek aplikasi dan website berhasil kita luncurkan di berbagai perusahaan. Silahkan
+                tekan tombol "Tanyakan" jika anda ingin mengetahui informasi dari customer service terkait
+                dengan aplikasi tersebut. Silahkan tekan "Selengkapnya" untuk mednapatkan informasi langsung
+                dari website ini.
+            </p>
         </div>
+        <div class="hidden scale-up col-lg-4 text-center ">
+            <img class="img-fluid mt-sm-5 mt-lg-0" src="../assets/img/about.jpg" style="width: 385px;" alt="">
+        </div>
+
     </div>
 </div>
 <!-- 2 end -->

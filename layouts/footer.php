@@ -268,7 +268,7 @@
                             card.classList.replace('text-light', 'text-dark')
                             let container = card.querySelector('.p-4');
                             container.querySelector('p').classList.toggle('text-secondary')
-                            let content = container.querySelector('.d-flex');
+                            let content = container.querySelector('.tablet');
                             let c = content.querySelector('.ps-4');
                             let h = content.querySelector('h6');
                             c.classList.add('text-dark')
@@ -277,7 +277,7 @@
                             card.classList.remove("bg-light",);
                             let container = card.querySelector('.p-4');
                             container.querySelector('p').classList.remove('text-secondary')
-                            let content = container.querySelector('.d-flex');
+                            let content = container.querySelector('.tablet');
                             let c = content.querySelector('.ps-4');
                             let h = content.querySelector('h6');
                             c.classList.remove('text-dark')

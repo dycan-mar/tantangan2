@@ -113,12 +113,12 @@
     /* dok-project */
     .project {
         background-image: url("../assets/img/bg2.png");
-        height: 440px;
+        height: 500px;
     }
 
     .swiper-slide {
         background-color: transparent;
-        width: 300px;
+        min-width: 300px;
         transition: all 0.3s ease-in-out;
     }
 
@@ -152,6 +152,17 @@
     /* end question */
     .animation {
         transition: all 0.5s ease-in-out;
+    }
+
+    .tablet {
+        display: flex;
+    }
+
+    @media (min-width:768px) {
+        .tablet {
+            display: block;
+            padding-top: 1.7rem;
+        }
     }
 </style>
 
@@ -394,8 +405,9 @@
     <div class="container py-5">
         <div class="swiper-container" style="overflow: hidden;width: 100%;">
             <div class="swiper-wrapper">
-                <div class="swiper-slide  p-4  border rounded" style="width: 271.333px; margin-right: 25px;">
-                    <div class=" text-light p-4">
+                <div class="swiper-slide  p-4 p-md-2 p-lg-4  border rounded"
+                    style="width: 271.333px; margin-right: 25px;">
+                    <div class=" text-light p-4 p-md-1 p-lg-4">
                         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
                             class="bi bi-quote mb-3" viewBox="0 0 16 16">
                             <path
@@ -403,8 +415,9 @@
                         </svg>
                         <p class="fw-semibold">Profesional Web Company Profile, menampilkan informasi secara lengkap
                         </p>
-                        <div class="d-flex">
-                            <img src="../assets/img/tuban-perspektif.png" alt="" style="height: 50px; width: auto;">
+                        <div class="tablet">
+                            <img class="img-fluid" src="../assets/img/tuban-perspektif.png" alt=""
+                                style="height: 50px; width: auto;">
                             <div class="ps-4">
                                 <h6 class="text-whie mb-1">Tuban Perspektif</h6>
                                 <small>Company Profile</small>
@@ -413,7 +426,8 @@
                     </div>
                 </div>
 
-                <div class="swiper-slide  p-4  border rounded" style="width: 271.333px; margin-right: 25px;">
+                <div class="swiper-slide  p-4 p-md-2 p-lg-4 border rounded"
+                    style="width: 271.333px; margin-right: 25px;">
                     <div class=" text-light p-4">
                         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
                             class="bi bi-quote mb-3" viewBox="0 0 16 16">
@@ -422,8 +436,9 @@
                         </svg>
                         <p class="fw-semibold">Aplikasi manajemen klaim asuransi yang dilengkapi status proses klaim
                         </p>
-                        <div class="d-flex">
-                            <img src="../assets/img/tbm.png" alt="" style="height: 50px; width: auto;">
+                        <div class="tablet">
+                            <img class="img-fluid" src="../assets/img/tbm.png" alt=""
+                                style="height: 50px; width: auto;">
                             <div class="ps-4">
                                 <h6 class="text-whie mb-1">TBM</h6>
                                 <small>Klaim Asuransi</small>
@@ -432,7 +447,8 @@
                     </div>
                 </div>
 
-                <div class="swiper-slide p-4 border rounded shadow" style="width: 271.333px; margin-right: 25px;">
+                <div class="swiper-slide p-4 p-md-2 p-lg-4 border rounded shadow"
+                    style="width: 271.333px; margin-right: 25px;">
                     <div class="  text-light p-4">
                         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
                             class="bi bi-quote mb-3" viewBox="0 0 16 16">
@@ -441,8 +457,9 @@
                         </svg>
                         <p class="fw-semibold">Aplikasi webview untuk memudahkan pelanggan membaca berita model koran
                         </p>
-                        <div class="d-flex">
-                            <img src="../assets/img/radarutara.png" alt="" style="height: 50px; width: auto;">
+                        <div class="tablet">
+                            <img class="img-fluid" src="../assets/img/radarutara.png" alt=""
+                                style="height: 50px; width: auto;">
                             <div class="ps-4">
                                 <h6 class="text-whie mb-1">Radar Utara</h6>
                                 <small>Website Android</small>
@@ -451,7 +468,8 @@
                     </div>
                 </div>
 
-                <div class="swiper-slide p-4 border rounded  shadow" style="width: 271.333px; margin-right: 25px;">
+                <div class="swiper-slide p-4 p-md-2 p-lg-4 border rounded  shadow"
+                    style="width: 271.333px; margin-right: 25px;">
                     <div class=" text-light p-4">
                         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
                             class="bi bi-quote mb-3" viewBox="0 0 16 16">
@@ -460,8 +478,9 @@
                         </svg>
                         <p class="fw-semibold">Aplikasi untuk manajemen stok sparepart dan pelaporan pekerjaan setiap
                             hari
-                        <div class="d-flex">
-                            <img src="../assets/img/shell-indonesia.png" alt="" style="height: 50px; width: auto;">
+                        <div class="tablet">
+                            <img class="img-fluid" src="../assets/img/shell-indonesia.png" alt=""
+                                style="height: 50px; width: auto;">
                             <div class="ps-4">
                                 <h6 class="text-whie mb-1">PT Shell Indonesia</h6>
                                 <small>Warehouse Management</small>
@@ -470,7 +489,8 @@
                     </div>
                 </div>
 
-                <div class="swiper-slide p-4 border rounded shadow" style="width: 271.333px; margin-right: 25px;">
+                <div class="swiper-slide p-4 p-md-2 p-lg-4 border rounded shadow"
+                    style="width: 271.333px; margin-right: 25px;">
                     <div class="  text-light p-4">
                         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
                             class="bi bi-quote mb-3" viewBox="0 0 16 16">
@@ -480,8 +500,9 @@
                         <p class="fw-semibold">Sistem Keuangan Santri & Koperasi Berbasis Teknologi untuk pondok
                             pesantren
                         </p>
-                        <div class="d-flex">
-                            <img src="../assets/img/siskesakti.png" alt="" style="height: 50px; width: auto;">
+                        <div class="tablet">
+                            <img class="img-fluid" src="../assets/img/siskesakti.png" alt=""
+                                style="height: 50px; width: auto;">
                             <div class="ps-4">
                                 <h6 class="text-whie mb-1">Siske Sakti</h6>
                                 <small>Keuangan & Koperasi</small>
@@ -490,7 +511,8 @@
                     </div>
                 </div>
 
-                <div class="swiper-slide p-4 border rounded shadow" style="width: 271.333px; margin-right: 25px;">
+                <div class="swiper-slide p-4 p-md-2 p-lg-4 border rounded shadow"
+                    style="width: 271.333px; margin-right: 25px;">
                     <div class=" text-light p-4">
                         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
                             class="bi bi-quote" viewBox=" 0 0 16 16">
@@ -499,8 +521,9 @@
                         </svg>
                         <p class="fw-semibold">Aplikasi untuk mengatur pesanan, proses produksi dan manajemen stok kain
                         </p>
-                        <div class="d-flex">
-                            <img src="../assets/img/tubanesiaicon.png" alt="" style="height: 50px; width: auto;">
+                        <div class="tablet">
+                            <img class="img-fluid" src="../assets/img/tubanesiaicon.png" alt=""
+                                style="height: 50px; width: auto;">
                             <div class="ps-4">
                                 <h6 class="text-whie mb-1">Tubanesia</h6>
                                 <small>Order Management</small>
@@ -515,16 +538,16 @@
 
 <!-- asked question -->
 <section class=" question my-5 mt-5" id="question">
-    <div class="container d-block">
+    <div class="container pt-5 d-block">
         <h6 class="hidden from-bottom text-primary text-center">Yang sering ditanyakan
         </h6>
         <h2 class="hidden from-bottom text-center">Frequently Asked <span class="text-primary"> <b>Questions</b></span>
         </h2>
 
         <!-- container-card -->
-        <div class="container row ">
+        <div class="container row justify-content-center mt-5 py-3" style="gap: 2rem;">
             <!-- card -->
-            <div class="hidden from-bottom col-md-6 px-3 card-question py-4 g-3 d-flex">
+            <div class="hidden from-bottom col-md-5 px-3 px-md-1 px-lg-3 card-question py-3 d-flex ">
                 <div>
                     <span class=" px-2 py-1 rounded-circle bg-dark">
                         <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="#ffffff"
@@ -544,7 +567,7 @@
                     </p>
                 </div>
             </div>
-            <div class="hidden from-bottom col-md-6 px-3 card-question py-4 g-3 d-flex">
+            <div class="hidden from-bottom col-md-5 px-3 px-md-1 px-lg-3 card-question py-3 d-flex ">
                 <div>
                     <span class=" px-2 py-1 rounded-circle bg-dark">
                         <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="#ffffff"
@@ -564,7 +587,7 @@
                     </p>
                 </div>
             </div>
-            <div class="hidden from-bottom col-md-6 px-3 card-question py-4 g-3 d-flex">
+            <div class="hidden from-bottom col-md-5 px-3 px-md-1 px-lg-3 card-question py-3 d-flex ">
                 <div>
                     <span class=" px-2 py-1 rounded-circle bg-dark">
                         <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="#ffffff"
@@ -581,7 +604,7 @@
                     </p>
                 </div>
             </div>
-            <div class="hidden from-bottom  col-md-6 px-3 card-question py-4 g-3 d-flex">
+            <div class="hidden from-bottom col-md-5 px-3 px-md-1 px-lg-3 card-question py-3 d-flex ">
                 <div>
                     <span class=" px-2 py-1 rounded-circle bg-dark">
                         <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="#ffffff"
@@ -598,7 +621,7 @@
                     </p>
                 </div>
             </div>
-            <div class="hidden from-bottom  col-md-6 px-3 card-question py-4 g-3 d-flex">
+            <div class="hidden from-bottom col-md-5 px-3 px-md-1 px-lg-3 card-question py-3 d-flex ">
                 <div>
                     <span class=" px-2 py-1 rounded-circle bg-dark">
                         <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="#ffffff"
@@ -617,7 +640,7 @@
                     </p>
                 </div>
             </div>
-            <div class="hidden from-bottom  col-md-6 px-3 card-question py-4 g-3 d-flex">
+            <div class="hidden from-bottom col-md-5 px-3 px-md-1 px-lg-3 card-question py-3 d-flex ">
                 <div>
                     <span class=" px-2 py-1 rounded-circle bg-dark">
                         <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="#ffffff"

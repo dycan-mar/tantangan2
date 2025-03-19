@@ -204,7 +204,7 @@
     <div class="hidden from-bottom col-lg-7">
         <h6><b>Lowongan Kerja</b></h6>
         <h1 class="">Customer Service</h1>
-        <label class="bg-danger text-white rounded-pill  text-center">Lowongan sudah Tutup</label>
+        <label class="bg-danger text-white rounded-pill text-center px-2">Lowongan sudah Tutup</label>
         <div class="info">
             <p class="miring">29 November 2023 s/d 15 November 2023</p>
             <p>Bagi anda yang mempunyai keahlian di bidang komunikasi dan sedikit keahlian Teknik Informatika, silahkan

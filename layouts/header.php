@@ -255,7 +255,7 @@ function active($locate)
 </style>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light justify-content-between position-fixed p-0 w-100" id="navbar">
+    <nav class="navbar navbar-expand-lg navbar-light justify-content-between position-fixed  p-0 w-100" id="navbar">
         <div class="container-fluid d-flex justify-content-between p-0" style="width: 100%;">
             <div class="navbar-brand p-0 m-3">
                 <a class="navbar-brand" href="#">
